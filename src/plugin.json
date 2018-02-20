@@ -1,10 +1,10 @@
 {
   "name": "Logtrust",
-  "id": "grafana-logtrust-datasource",
+  "id": "logtrust-grafana-datasource",
   "type": "datasource",
 
   "partials": {
-    "config": "public/app/plugins/datasource/simplejson/partials/config.html"
+    "config": "public/app/plugins/datasource/logtrust-grafana-datasource/partials/config.html"
   },
 
   "metrics": true,
@@ -21,10 +21,10 @@
       "large": "img/Logo_white.png"
     },
     "links": [
-      {"name": "GitHub", "url": "https://github.com/grafana/simple-json-datasource"},
-      {"name": "MIT License", "url": "https://github.com/grafana/simple-json-datasource/blob/master/LICENSE"}
+      {"name": "GitHub", "url": "https://github.com/Logtrust/logtrust-grafana-datasource"},
+      {"name": "MIT License", "url": "https://github.com/Logtrust/logtrust-grafana-datasource.git/blob/master/LICENSE"}
     ],
-    "version": "0.2.0",
+    "version": "1.0.0",
     "updated": "2018-02-07"
   },
 
