@@ -14,7 +14,7 @@ export class GenericDatasourceQueryCtrl extends QueryCtrl {
     this.attributeSegment = this.uiSegmentSrv.newPlusButton()
 
   //  this.target.target = this.target.target || 'select queryid';
-    this.target.target = 'select Logtrust';
+    this.target.target = 'select Devo';
     this.target.type = this.target.type || 'timeserie';
   }
 

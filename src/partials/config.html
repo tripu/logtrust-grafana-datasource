@@ -1,34 +1,29 @@
-<!--<datasource-http-settings current="ctrl.current">
-</datasource-http-settings>
--->
-
-<h3 class="page-heading">Logtrust Connection Details </h3>
+<h3 class="page-heading">API connection details</h3>
 
 <div class="gf-form-group">
-
+	
 	<div class="gf-form-inline">
 		<div class="gf-form max-width-30">
-			<span class="gf-form-label width-7">Api URI</span>
+			<span class="gf-form-label width-7">Endpoint</span>
 			<input type="text" class="gf-form-input" ng-model='ctrl.current.jsonData.url' placeholder="" required></input>
-      <i class="fa fa-question-circle" bs-tooltip="'URL where Logtrust Api is Serving'" data-placement="right"></i>
+			<i class="fa fa-question-circle" bs-tooltip="'URL of the API; eg “https://apiv2-us.devo.com/search”'" data-placement="right"></i>
 		</div>
 	</div>
-
-<div class="gf-form-inline">
-	<div class="gf-form max-width-30">
-		<span class="gf-form-label width-7">Api Key</span>
-		<input type="text" class="gf-form-input" ng-model='ctrl.current.jsonData.apikey' placeholder="" required></input>
-		<i class="fa fa-question-circle" bs-tooltip="'Api Key to Authenticate the Request'" data-placement="right"></i>
-	</div>
-</div>
-
+	
 	<div class="gf-form-inline">
 		<div class="gf-form max-width-30">
-			<span class="gf-form-label width-7">Api Secret</span>
-			<input type="text" class="gf-form-input" ng-model='ctrl.current.jsonData.apisecret' placeholder="" required></input>
-      <i class="fa fa-question-circle" bs-tooltip="'Api Secret to Sign the Request'" data-placement="right"></i>
+			<span class="gf-form-label width-7">Key</span>
+			<input type="text" class="gf-form-input" ng-model='ctrl.current.jsonData.apikey' placeholder="" required></input>
+			<i class="fa fa-question-circle" bs-tooltip="'API key to authenticate the requests'" data-placement="right"></i>
 		</div>
 	</div>
-
-
+	
+	<div class="gf-form-inline">
+		<div class="gf-form max-width-30">
+			<span class="gf-form-label width-7">Secret</span>
+			<input type="text" class="gf-form-input" ng-model='ctrl.current.jsonData.apisecret' placeholder="" required></input>
+			<i class="fa fa-question-circle" bs-tooltip="'API secret to sign the requests'" data-placement="right"></i>
+		</div>
+	</div>
+	
 </div>
