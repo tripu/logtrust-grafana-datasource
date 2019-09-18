@@ -10,7 +10,10 @@ export class GenericDatasource {
     this.type = instanceSettings.type;
     this.name = instanceSettings.name;
     if( instanceSettings.jsonData){
-      this.url = instanceSettings.jsonData.url;
+      if ('/' === instanceSettings.jsonData.url[instanceSettings.jsonData.url.length - 1])
+        this.url = instanceSettings.jsonData.url;
+      else
+        this.url = instanceSettings.jsonData.url + '/';
       //this.token = instanceSettings.jsonData.token;
       this.apikey = instanceSettings.jsonData.apikey;
       this.apisecret = instanceSettings.jsonData.apisecret;
@@ -84,7 +87,6 @@ export class GenericDatasource {
     }
     body.mode = {};
     body.mode.type = "json/compact";
-    body.destiny = [];
 
     var d = new Date();
     var timestamp =  d.getTime();
@@ -261,13 +263,13 @@ return results;
   testDatasource() {
     var q = {};
     q.queryId  = "from system.internal.dual";
-    q.from = moment().unix()- 60;
+    q.from = moment().unix() - 60;
     q.to = moment().unix();
     return this.restPost(q).then(response => {
       return { status: "success", message: "Data source is working", title: "Success" };
  }).catch(err => {
     console.log(err);
-    return { status: "error", message: "Data source is not working property", title: "Error" };
+    return { status: "error", message: "Data source is not working properly", title: "Error" };
    })
 
   }
@@ -287,7 +289,7 @@ return results;
     };
 
     return this.backendSrv.datasourceRequest({
-      url: this.url + '/annotations',
+      url: this.url + 'annotations',
       method: 'POST',
       data: annotationQuery
     }).then(result => {
