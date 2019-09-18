@@ -1,9 +1,6 @@
 # Grafana datasource for Devo
 
-This datasource was created to connect [Grafana](https://grafana.com/) with [Devo](https://www.devo.com/),
-and launch queries to draw the information storage in Devo.
-
-Based on [Grafana Simple JSON Datasource plugin](https://github.com/grafana/simple-json-datasource).
+*Connect [Grafana](https://grafana.com/) to [Devo](https://www.devo.com/)*
 
 ## First: set up Grafana
 
@@ -69,7 +66,7 @@ In the side menu click Data Sources;
 
 Click the + Add data source in the top header;
 
-Select Logtrust from the Type dropdown;
+Select Devo from the Type dropdown;
 
 ## Configure datasource
 
